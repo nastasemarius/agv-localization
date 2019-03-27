@@ -1,0 +1,17 @@
+<form>
+  <div class="map-search">
+    <mat-form-field class="example-full-width">
+      <input
+        matInput
+        placeholder="Search..."
+        [formControl]="searchControl"
+        type="text"
+      />
+    </mat-form-field>
+    <ul>
+      <li *ngFor="let result of (searchResults | async)">
+        <div [innerHTML]="result.label"></div>
+      </li>
+    </ul>
+  </div>
+</form>

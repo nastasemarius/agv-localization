@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import { MapConfigService } from '../map-config.service';
 
 declare var H: any;
 const PIXEL_RATIO = window.devicePixelRatio;
@@ -18,10 +19,10 @@ export class MapComponent implements OnInit {
   @ViewChild("map")
   public mapElement: ElementRef;
 
-  public constructor() {
+  public constructor(private mapConfig: MapConfigService) {
     this.platform = new H.service.Platform({
-      app_id: "13hwYirltXKWTWuVQBHT",
-      app_code: "81n03Tl0Oobk_csyXiyPLQ"
+      app_id: this.mapConfig.AppId,
+      app_code: this.mapConfig.AppCode
     });
 
     this.defaultLayers = this.platform.createDefaultLayers({
