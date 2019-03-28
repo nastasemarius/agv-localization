@@ -7,7 +7,7 @@ import { SearchService } from "../search.service";
 @Component({
   selector: "agv-search",
   templateUrl: "./search.component.html",
-  styleUrls: ["./search.component.less"]
+  styleUrls: ["./search.component.scss"]
 })
 export class SearchComponent implements OnInit {
   public searchControl: FormControl;
