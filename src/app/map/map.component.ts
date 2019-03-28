@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
-import { MapConfigService } from '../map-config.service';
+import { MapConfigService } from "../map-config.service";
 
 declare var H: any;
 const PIXEL_RATIO = window.devicePixelRatio;
 
 @Component({
-  selector: "app-map",
+  selector: "agv-map",
   templateUrl: "./map.component.html",
   styleUrls: ["./map.component.scss"]
 })
